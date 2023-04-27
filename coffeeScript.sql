@@ -178,3 +178,16 @@ INSERT INTO `coffeeshop`.`items` (`itemID`, `name`, `description`, `price`, `Cat
 INSERT INTO `coffeeshop`.`items` (`itemID`, `name`, `description`, `price`, `Category_catergoryID`) VALUES ('I012', 'Royal English Breakfast Tea', 'english style black tea', '4.00', 'CG4001');
 INSERT INTO `coffeeshop`.`items` (`itemID`, `name`, `description`, `price`, `Category_catergoryID`) VALUES ('I013', 'Iced Matcha Tea Latte', 'matcha with milk over ice', '5.00', 'CG4002');
 INSERT INTO `coffeeshop`.`items` (`itemID`, `name`, `description`, `price`, `Category_catergoryID`) VALUES ('I014', 'Iced Green Tea', 'green tea blended with mint, lemongrass and lemon verbena, and given a good shake with ice', '5.50', 'CG4002');
+
+
+----Order Table-----
+INSERT INTO `coffeeshop`.`customer` (`customerID`, `firstName`, `lastName`, `phone`, `email`, `city`, `zipcode`) VALUES ('C001', 'Linh', 'Nguyen', '8322310312', 'linhxuanthinguyen@gmail.com', 'Houston', '77070');
+INSERT INTO `coffeeshop`.`customer` (`customerID`, `firstName`, `lastName`, `phone`, `email`, `city`, `zipcode`) VALUES ('C002', 'Michael', 'Jackson', '8324789874', 'mj2016@gmail.com', 'Houston', '77001');
+INSERT INTO `coffeeshop`.`customer` (`customerID`, `firstName`, `lastName`, `phone`, `email`, `city`, `zipcode`) VALUES ('C003', 'Sang ', 'Lee', '3137894575', 'leesang.45@gmail.com', 'Houston', '77001');
+INSERT INTO `coffeeshop`.`customer` (`customerID`, `firstName`, `lastName`, `phone`, `email`, `city`, `zipcode`) VALUES ('C004', 'Stevie', 'Wonder', '7135641578', 'stWonder@gmail.com', 'Houston', '77070');
+INSERT INTO `coffeeshop`.`customer` (`customerID`, `firstName`, `lastName`, `phone`, `email`, `city`, `zipcode`) VALUES ('C005', 'Celine', 'Dion', '5124574515', 'CelineDion123@gmail.com', 'Houston', '77043');
+INSERT INTO `coffeeshop`.`customer` (`customerID`, `firstName`, `lastName`, `phone`, `email`, `city`, `zipcode`) VALUES ('C006', 'Frank', 'Sinatra', '8647549746', 'Frankclassy@gmail.com', 'Houston', '77041');
+INSERT INTO `coffeeshop`.`customer` (`customerID`, `firstName`, `lastName`, `phone`, `email`, `city`, `zipcode`) VALUES ('C007', 'Lana', 'Rey', '7134216513', 'lanadelrey30@gmail.com', 'Austin', '78723');
+INSERT INTO `coffeeshop`.`customer` (`customerID`, `firstName`, `lastName`, `phone`, `email`, `city`, `zipcode`) VALUES ('C008', 'Kendrick', 'Lamar', '8322314514', 'Klamar8745@gmail.com', 'Austin', '78761');
+INSERT INTO `coffeeshop`.`customer` (`customerID`, `firstName`, `lastName`, `phone`, `email`, `city`, `zipcode`) VALUES ('C009', 'Bruce', 'Spring', '9451254784', 'brucelovespring@gmail.com', 'Austin', '78761');
+INSERT INTO `coffeeshop`.`customer` (`customerID`, `firstName`, `lastName`, `phone`, `email`, `city`, `zipcode`) VALUES ('C010', 'Alex', 'Warren', '8457245613', 'chasingShadows@gmail.com', 'Austin', '78723');
