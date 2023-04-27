@@ -161,3 +161,20 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+
+----Items Table-----
+INSERT INTO `coffeeshop`.`items` (`itemID`, `name`, `description`, `price`, `Category_catergoryID`) VALUES ('I001', 'Cold Brew French Style', 'french style coffee cold brew in 1 hour', '5.00', 'CG1001');
+INSERT INTO `coffeeshop`.`items` (`itemID`, `name`, `description`, `price`, `Category_catergoryID`) VALUES ('I002', 'Cold Espresso', 'pressure steam black coffee', '4.50', 'CG1001');
+INSERT INTO `coffeeshop`.`items` (`itemID`, `name`, `description`, `price`, `Category_catergoryID`) VALUES ('I003', 'Iced Americano', 'espresso shots topped with cold water ', '5.00', 'CG1001');
+INSERT INTO `coffeeshop`.`items` (`itemID`, `name`, `description`, `price`, `Category_catergoryID`) VALUES ('I004', 'Hot Espresso', 'espresso shot in small cup', '4.00', 'CG1002');
+INSERT INTO `coffeeshop`.`items` (`itemID`, `name`, `description`, `price`, `Category_catergoryID`) VALUES ('I005', 'Hot Chocolate', '1 shot of coffee with milk and  chocolate-flavored syrups', '5.00', 'CG1002');
+INSERT INTO `coffeeshop`.`items` (`itemID`, `name`, `description`, `price`, `Category_catergoryID`) VALUES ('I006', 'Ice Mocha Latte', 'espresso with milk and mocha flavor', '5.00', 'CG2001');
+INSERT INTO `coffeeshop`.`items` (`itemID`, `name`, `description`, `price`, `Category_catergoryID`) VALUES ('I007', 'Hot Latte', 'espresso, steamed milk and a layer of foam', '5.00', 'CG2002');
+INSERT INTO `coffeeshop`.`items` (`itemID`, `name`, `description`, `price`, `Category_catergoryID`) VALUES ('I008', 'Hot Cappuccino', 'dark, rich espresso lies in wait under a smoothed and stretched layer of thick milk foam', '5.0', 'CG3001');
+INSERT INTO `coffeeshop`.`items` (`itemID`, `name`, `description`, `price`, `Category_catergoryID`) VALUES ('I009', 'Chocolate Chip Frappuccino', 'chocolate chip with coffee milk, ice, whipped cream and mocha drizzle', '5.50', 'CG3002');
+INSERT INTO `coffeeshop`.`items` (`itemID`, `name`, `description`, `price`, `Category_catergoryID`) VALUES ('I010', 'Caramel Frappuccino', 'caramel syrup meets coffee, milk and ice topped with whipped cream and caramel sauce', '5.50', 'CG3002');
+INSERT INTO `coffeeshop`.`items` (`itemID`, `name`, `description`, `price`, `Category_catergoryID`) VALUES ('I011', 'Strawberry Crème Frappuccino', 'non-caffeine strawberry puree, whipped cream and ice', '5.00', 'CG3002');
+INSERT INTO `coffeeshop`.`items` (`itemID`, `name`, `description`, `price`, `Category_catergoryID`) VALUES ('I012', 'Royal English Breakfast Tea', 'english style black tea', '4.00', 'CG4001');
+INSERT INTO `coffeeshop`.`items` (`itemID`, `name`, `description`, `price`, `Category_catergoryID`) VALUES ('I013', 'Iced Matcha Tea Latte', 'matcha with milk over ice', '5.00', 'CG4002');
+INSERT INTO `coffeeshop`.`items` (`itemID`, `name`, `description`, `price`, `Category_catergoryID`) VALUES ('I014', 'Iced Green Tea', 'green tea blended with mint, lemongrass and lemon verbena, and given a good shake with ice', '5.50', 'CG4002');
