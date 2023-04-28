@@ -231,6 +231,15 @@ INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `it
 INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `itemQuantity`) VALUES ('O1010', 'I006', '1');
 INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `itemQuantity`) VALUES ('O1010', 'I002', '1');
 
+----Branch table: ----- must add this before staff table data
+
+INSERT INTO `coffeeshop`.`branch` (`branchID`, `street`, `city`, `zipcode`, `phone`) VALUES ('B001', '1235 Lacey Crest Dr', 'Houston', '77070', '8322310312');
+INSERT INTO `coffeeshop`.`branch` (`branchID`, `street`, `city`, `zipcode`, `phone`) VALUES ('B002', '1 Main', 'Houston', '77001', '7134567451');
+INSERT INTO `coffeeshop`.`branch` (`branchID`, `street`, `city`, `zipcode`, `phone`) VALUES ('B003', '8456 Broadway St', 'Houston', '77043', '8323154842');
+INSERT INTO `coffeeshop`.`branch` (`branchID`, `street`, `city`, `zipcode`, `phone`) VALUES ('B004', '1314 Allen St', 'Austin', '78723', '8134574561');
+INSERT INTO `coffeeshop`.`branch` (`branchID`, `street`, `city`, `zipcode`, `phone`) VALUES ('B005', '9845 Crockcreek St', 'Auston', '78761', '8134571264');
+
+
 ----Staff Table----
 
 --there are some changes. Please delete the staff table which was created before
