@@ -316,3 +316,7 @@ UPDATE `coffeeshop`.`staff` SET `branchID` = 'B005' WHERE (`staffID` = 'S015');
 DELETE FROM `coffeeshop`.`staff` WHERE (`staffID` = 'S016');
 DELETE FROM `coffeeshop`.`staff` WHERE (`staffID` = 'S017');
 DELETE FROM `coffeeshop`.`staff` WHERE (`staffID` = 'S018');
+
+--Some more update---
+ALTER TABLE `coffeeshop`.`items` 
+CHANGE COLUMN `name` `itemName` VARCHAR(45) NOT NULL ;
