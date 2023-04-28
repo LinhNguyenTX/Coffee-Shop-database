@@ -164,6 +164,16 @@ SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 
+---Category table: use this code only not the ones in ggl doc
+INSERT INTO `coffeeshop`.`category` (`catergoryID`, `categoryName`, `description`) VALUES ('CG1001', 'Ice Coffee', 'coffee with ice');
+INSERT INTO `coffeeshop`.`category` (`catergoryID`, `categoryName`, `description`) VALUES ('CG1002', 'Hot Cofee', 'coffee with hot water');
+INSERT INTO `coffeeshop`.`category` (`catergoryID`, `categoryName`, `description`) VALUES ('CG2001', 'Ice Latte', 'coffee with milk and ice');
+INSERT INTO `coffeeshop`.`category` (`catergoryID`, `categoryName`, `description`) VALUES ('CG2002', 'Hot Latte', 'coffee with milk and hot water');
+INSERT INTO `coffeeshop`.`category` (`catergoryID`, `categoryName`, `description`) VALUES ('CG3001', 'Hot Cappuchino', 'cofee with foam milk and hot water');
+INSERT INTO `coffeeshop`.`category` (`catergoryID`, `categoryName`, `description`) VALUES ('CG3002', 'Frappuccino', 'cofee with foam milk and grind-ice');
+INSERT INTO `coffeeshop`.`category` (`catergoryID`, `categoryName`, `description`) VALUES ('CG4001', 'Hot Tea', 'tea with hot water');
+INSERT INTO `coffeeshop`.`category` (`catergoryID`, `categoryName`, `description`) VALUES ('CG4002', 'Ice Tea', 'tea with ice');
+
 ----Items Table-----
 INSERT INTO `coffeeshop`.`items` (`itemID`, `name`, `description`, `price`, `Category_catergoryID`) VALUES ('I001', 'Cold Brew French Style', 'french style coffee cold brew in 1 hour', '5.00', 'CG1001');
 INSERT INTO `coffeeshop`.`items` (`itemID`, `name`, `description`, `price`, `Category_catergoryID`) VALUES ('I002', 'Cold Espresso', 'pressure steam black coffee', '4.50', 'CG1001');
