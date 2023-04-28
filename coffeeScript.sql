@@ -134,7 +134,8 @@ CREATE TABLE IF NOT EXISTS `coffeeShop`.`Payment` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-
+alter table payment
+add totalAmount decimal(4,2);
 -- -----------------------------------------------------
 -- Table `coffeeShop`.`Order_has_Items`
 -- -----------------------------------------------------
@@ -229,3 +230,70 @@ INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `it
 INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `itemQuantity`) VALUES ('O1010', 'I001', '2');
 INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `itemQuantity`) VALUES ('O1010', 'I006', '1');
 INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `itemQuantity`) VALUES ('O1010', 'I002', '1');
+
+----Staff Table----
+
+--there are some changes. Please delete the staff table which was created before
+--and add the this new one so the code can be united
+---- Table `coffeeShop`.`Staff`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `coffeeShop`.`Staff` (
+  `staffID` VARCHAR(10) NOT NULL,
+  `firstName` VARCHAR(40) NOT NULL,
+  `lastName` VARCHAR(40) NOT NULL,
+  `phone` VARCHAR(10) NOT NULL,
+  `email` VARCHAR(100) NOT NULL,
+  `DOB` DATE NOT NULL,
+  `positionTitle` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`staffID`),
+  UNIQUE INDEX `DOB_UNIQUE` (`DOB` ASC) VISIBLE,
+  UNIQUE INDEX `phone_UNIQUE` (`phone` ASC) VISIBLE)
+ENGINE = InnoDB;
+
+--then do this--
+
+INSERT INTO `coffeeshop`.`staff` (`staffID`, `firstName`, `lastName`, `phone`, `email`, `DOB`, `positionTitle`) VALUES ('S001', 'Linh', 'Nguyen', '8322310315', 'nguyenl190@gator.uhd.edu', '1998-07-23', 'Manager');
+INSERT INTO `coffeeshop`.`staff` (`staffID`, `firstName`, `lastName`, `phone`, `email`, `DOB`, `positionTitle`) VALUES ('S002', 'Young', 'Bryce', '7131234567', 'bryce.young@gmail.com', '2000-05-01', 'Barista');
+INSERT INTO `coffeeshop`.`staff` (`staffID`, `firstName`, `lastName`, `phone`, `email`, `DOB`, `positionTitle`) VALUES ('S003', 'CJ', 'Stroud', '2811234567', 'cj.stroud@gmail.com', '2000-04-27', 'Barista');
+INSERT INTO `coffeeshop`.`staff` (`staffID`, `firstName`, `lastName`, `phone`, `email`, `DOB`, `positionTitle`) VALUES ('S004', 'Emperor', 'Palpatine', '8321234567', 'emperorpalpatine@gmail.com', '1950-01-01', 'Manager');
+INSERT INTO `coffeeshop`.`staff` (`staffID`, `firstName`, `lastName`, `phone`, `email`, `DOB`, `positionTitle`) VALUES ('S005', 'Darth', 'Vader', '3461234567', 'darth.vader@gmail.com', '1975-01-01', 'Barista');
+INSERT INTO `coffeeshop`.`staff` (`staffID`, `firstName`, `lastName`, `phone`, `email`, `DOB`, `positionTitle`) VALUES ('S006', 'Darth', 'Maul', '5121234567', 'darth.maul@gmail.com', '1950-01-08', 'Barista');
+INSERT INTO `coffeeshop`.`staff` (`staffID`, `firstName`, `lastName`, `phone`, `email`, `DOB`, `positionTitle`) VALUES ('S007', 'Ime', 'Udoka', '7132345678', 'ime.udoka@gmail.com', '1980-05-07', 'Manager');
+INSERT INTO `coffeeshop`.`staff` (`staffID`, `firstName`, `lastName`, `phone`, `email`, `DOB`, `positionTitle`) VALUES ('S008', 'Jalen', 'Green', '2812345678', 'jalen.green@gmail.com', '2002-07-04', 'Barista');
+INSERT INTO `coffeeshop`.`staff` (`staffID`, `firstName`, `lastName`, `phone`, `email`, `DOB`, `positionTitle`) VALUES ('S009', 'Jabari', 'Smith', '8322345678', 'jabari.smith@gmail.com', '2003-06-08', 'Barista');
+INSERT INTO `coffeeshop`.`staff` (`staffID`, `firstName`, `lastName`, `phone`, `email`, `DOB`, `positionTitle`) VALUES ('S010', 'Lebron', 'James', '3462345678', 'lebron.james@gmail.com', '1980-06-30', 'Manager');
+INSERT INTO `coffeeshop`.`staff` (`staffID`, `firstName`, `lastName`, `phone`, `email`, `DOB`, `positionTitle`) VALUES ('S011', 'Anthony', 'Davis', '5122345678', 'anthony.davis@gmail.com', '1988-08-16', 'Barista');
+INSERT INTO `coffeeshop`.`staff` (`staffID`, `firstName`, `lastName`, `phone`, `email`, `DOB`, `positionTitle`) VALUES ('S012', 'Russell', 'Westbrook', '7133456789', 'russell.westbrook@gmail.com', '1985-07-24', 'Barista');
+INSERT INTO `coffeeshop`.`staff` (`staffID`, `firstName`, `lastName`, `phone`, `email`, `DOB`, `positionTitle`) VALUES ('S013', 'Michael', 'Scott', '2813456789', 'michael.scott@gmail.com', '1970-08-17', 'Manager');
+INSERT INTO `coffeeshop`.`staff` (`staffID`, `firstName`, `lastName`, `phone`, `email`, `DOB`, `positionTitle`) VALUES ('S014', 'Jim', 'Halpert', '8323456789', 'jim.halpert@gmail.com', '1986-04-05', 'Barista');
+INSERT INTO `coffeeshop`.`staff` (`staffID`, `firstName`, `lastName`, `phone`, `email`, `DOB`, `positionTitle`) VALUES ('S015', 'Dwight', 'Schrute', '3463456789', 'dwight.schrute@gmail.com', '1986-12-05', 'Barista');
+INSERT INTO `coffeeshop`.`staff` (`staffID`, `firstName`, `lastName`, `phone`, `email`, `DOB`, `positionTitle`) VALUES ('S016', 'Lupita', 'Thornton', '8323930001', 'lupita.thornton@gmail.com', '1969-03-12', 'Manager');
+INSERT INTO `coffeeshop`.`staff` (`staffID`, `firstName`, `lastName`, `phone`, `email`, `DOB`, `positionTitle`) VALUES ('S017', 'Maria', 'Hernandez', '8323930002', 'maria.hernandez@gmail.com', '1985-05-30', 'Barista');
+INSERT INTO `coffeeshop`.`staff` (`staffID`, `firstName`, `lastName`, `phone`, `email`, `DOB`, `positionTitle`) VALUES ('S018', 'Michael', 'Do', '8323930003', 'michael.do@gmail.com', '1992-01-12', 'Barista');
+
+---then add this code---
+alter table staff
+add branchID varchar(10);
+
+alter table staff
+add foreign key (branchID) references branch(branchID);
+
+---then do this last part for staff table---
+UPDATE `coffeeshop`.`staff` SET `branchID` = 'B001' WHERE (`staffID` = 'S001');
+UPDATE `coffeeshop`.`staff` SET `branchID` = 'B001' WHERE (`staffID` = 'S002');
+UPDATE `coffeeshop`.`staff` SET `branchID` = 'B001' WHERE (`staffID` = 'S003');
+UPDATE `coffeeshop`.`staff` SET `branchID` = 'B002' WHERE (`staffID` = 'S004');
+UPDATE `coffeeshop`.`staff` SET `branchID` = 'B002' WHERE (`staffID` = 'S005');
+UPDATE `coffeeshop`.`staff` SET `branchID` = 'B002' WHERE (`staffID` = 'S006');
+UPDATE `coffeeshop`.`staff` SET `branchID` = 'B003' WHERE (`staffID` = 'S007');
+UPDATE `coffeeshop`.`staff` SET `branchID` = 'B003' WHERE (`staffID` = 'S008');
+UPDATE `coffeeshop`.`staff` SET `branchID` = 'B003' WHERE (`staffID` = 'S009');
+UPDATE `coffeeshop`.`staff` SET `branchID` = 'B004' WHERE (`staffID` = 'S010');
+UPDATE `coffeeshop`.`staff` SET `branchID` = 'B004' WHERE (`staffID` = 'S011');
+UPDATE `coffeeshop`.`staff` SET `branchID` = 'B004' WHERE (`staffID` = 'S012');
+UPDATE `coffeeshop`.`staff` SET `branchID` = 'B005' WHERE (`staffID` = 'S013');
+UPDATE `coffeeshop`.`staff` SET `branchID` = 'B005' WHERE (`staffID` = 'S014');
+UPDATE `coffeeshop`.`staff` SET `branchID` = 'B005' WHERE (`staffID` = 'S015');
+DELETE FROM `coffeeshop`.`staff` WHERE (`staffID` = 'S016');
+DELETE FROM `coffeeshop`.`staff` WHERE (`staffID` = 'S017');
+DELETE FROM `coffeeshop`.`staff` WHERE (`staffID` = 'S018');
