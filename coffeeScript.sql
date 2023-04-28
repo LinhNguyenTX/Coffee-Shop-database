@@ -206,4 +206,26 @@ INSERT INTO `coffeeshop`.`customer` (`customerID`, `firstName`, `lastName`, `pho
 INSERT INTO `coffeeshop`.`customer` (`customerID`, `firstName`, `lastName`, `phone`, `email`, `city`, `zipcode`) VALUES ('C010', 'Alex', 'Warren', '8457245613', 'chasingShadows@gmail.com', 'Austin', '78723');
 
 
----
+---Order has Items Table----
+INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `itemQuantity`) VALUES ('O1001', 'I001', '1');
+INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `itemQuantity`) VALUES ('O1001', 'I002', '1');
+INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `itemQuantity`) VALUES ('O1001', 'I003', '1');
+INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `itemQuantity`) VALUES ('O1002', 'I009', '1');
+INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `itemQuantity`) VALUES ('O1003', 'I009', '1');
+INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `itemQuantity`) VALUES ('O1003', 'I010', '1');
+INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `itemQuantity`) VALUES ('O1003', 'I012', '4');
+INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `itemQuantity`) VALUES ('O1004', 'I001', '1');
+INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `itemQuantity`) VALUES ('O1004', 'I014', '1');
+INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `itemQuantity`) VALUES ('O1004', 'I011', '1');
+INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `itemQuantity`) VALUES ('O1005', 'I010', '1');
+INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `itemQuantity`) VALUES ('O1005', 'I012', '1');
+INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `itemQuantity`) VALUES ('O1006', 'I002', '1');
+INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `itemQuantity`) VALUES ('O1007', 'I005', '2');
+INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `itemQuantity`) VALUES ('O1007', 'I007', '2');
+INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `itemQuantity`) VALUES ('O1007', 'I004', '1');
+INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `itemQuantity`) VALUES ('O1008', 'I009', '1');
+INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `itemQuantity`) VALUES ('O1008', 'I010', '1');
+INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `itemQuantity`) VALUES ('O1009', 'I003', '2');
+INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `itemQuantity`) VALUES ('O1010', 'I001', '2');
+INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `itemQuantity`) VALUES ('O1010', 'I006', '1');
+INSERT INTO `coffeeshop`.`order_has_items` (`Order_orderID`, `Items_itemID`, `itemQuantity`) VALUES ('O1010', 'I002', '1');
