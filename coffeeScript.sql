@@ -320,3 +320,49 @@ DELETE FROM `coffeeshop`.`staff` WHERE (`staffID` = 'S018');
 --Some more update---
 ALTER TABLE `coffeeshop`.`items` 
 CHANGE COLUMN `name` `itemName` VARCHAR(45) NOT NULL ;
+
+--Testting--
+/*-----Find the number of staff in each branch---*/
+ select branchID, COUNT(staffID) as noStaff_eachBranch
+ from staff
+ group by branchID
+ order by branchID;
+
+ /*-----Find all the manager of each branch-----*/
+select staffID, firstName, lastName, branchID, positionTitle
+from staff
+where positionTitle = "Manager"
+order by staffID;
+
+ /*-----Find the order which has more than 3 items---*/
+select Order_orderID, sum(itemQuantity) as mySum
+from order_has_items
+group by Order_orderID
+having sum(itemQuantity) >3
+order by Order_orderID;
+
+/*-----Find the times which each item is order of all orders----*/
+select Items_itemID, sum(itemQuantity) as myCount
+from order_has_items
+group by Items_itemID;
+
+/*-----Find the most 3 order items with names----*/
+select Items_itemID, itemName, sum(itemQuantity) as myCount
+from order_has_items, items
+where Items_itemID = itemID
+group by Items_itemID, itemName
+order by sum(itemQuantity) desc, Items_itemID asc
+limit 3;
+
+/*-----Find the staff who works in the branch with zipcode 77070----*/
+select staffID, firstName, lastname, positionTitle 
+from staff
+where branchID = (select branchID
+					from branch
+                    where zipcode = "77070");
+
+/*-----Find the number of customers for each branch---*/
+select branchID, count(c.zipcode) as myCount
+from branch b, customer c
+where b.zipcode = c.zipcode
+group by branchID;
