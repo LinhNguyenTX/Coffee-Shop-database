@@ -163,7 +163,7 @@ SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
-
+--new
 ---Category table: use this code only not the ones in ggl doc
 INSERT INTO `coffeeshop`.`category` (`catergoryID`, `categoryName`, `description`) VALUES ('CG1001', 'Ice Coffee', 'coffee with ice');
 INSERT INTO `coffeeshop`.`category` (`catergoryID`, `categoryName`, `description`) VALUES ('CG1002', 'Hot Cofee', 'coffee with hot water');
